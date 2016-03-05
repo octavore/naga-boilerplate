@@ -1,10 +1,12 @@
-all: clean-build build app.js app.css
-	cp html/index.html build/
+bindata.go: clean build app.js app.css
+	cp html/* build/
 	$$GOPATH/bin/go-bindata -pkg static -prefix build/ build/
 
-clean-build:
-	rm bindata.go
+clean:
+	rm -f bindata.go
 	rm -rf build
+
+build:
 	mkdir build
 
 app.js:
@@ -18,6 +20,6 @@ prepare:
 	npm install
 	./node_modules/.bin/bower install
 
-clean: clean-build
+prepare-clean: clean
 	rm -rf node_modules
 	rm -rf bower_components
