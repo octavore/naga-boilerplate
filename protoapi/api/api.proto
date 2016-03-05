@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package protoapi.api;
+option go_package = 'protoapi/api';
+
+message GetThingRequest {
+  optional int32 id = 1;
+}
+
+message GetThingResponse {
+  repeated int32 things = 1;
+}
+
+service ThingService {
+  rpc GetThing(GetThingRequest) returns(GetThingResponse);
+}
