@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "build-sass": "node-sass css/app.sass build/app.css --output-style compressed",
+    "develop-sass": "node-sass css/app.sass build/app.css -w css",
+    "build": "browserify js/app.ts -p tsify -g uglifyify --outfile build/app.js",
+    "develop": "watchify js/app.ts -p tsify --debug --outfile build/app.js"
+  },
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "browserify": "^13.0.0",
+    "node-sass": "^3.4.2",
+    "tsify": "^0.13.2",
+    "tslint": "^3.5.0",
+    "typescript": "^1.8.7",
+    "uglifyify": "^3.0.1",
+    "watchify": "^3.7.0"
+  }
+}

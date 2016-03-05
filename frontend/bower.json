@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "frontend",
+  "dependencies": {
+    "bourbon": "^4.2.6",
+    "normalize-css": "normalize.css#^3.0.3",
+    "mithril": "^0.2.3"
+  }
+}

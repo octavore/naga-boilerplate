@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "quotemark": [true, "single"],
+    "semicolon": [
+      "always"
+    ],
+    "no-unused-variable": true
+  }
+}
