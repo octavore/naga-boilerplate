@@ -2,11 +2,7 @@
 SHELL := /bin/bash
 export PATH := ./node_modules/.bin:$(GOPATH)/bin:$(PATH)
 
-# directories
-SRC_DIR=./src
-TEST_DIR=./test
-BUILD_DIR=./build
-
+include scripts/env
 include scripts/prepare
 include scripts/build
 include scripts/test
