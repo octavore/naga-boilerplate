@@ -6,7 +6,7 @@ test-compile:
 	tsc --outDir $(TEST_DIR)
 
 test: test-compile
-	mocha $(TEST_DIR)
+	mocha --recursive $(TEST_DIR)/test
 
 lint:
 	find $(SRC_DIR) -name "*.ts" | xargs tslint -c tslint.json
