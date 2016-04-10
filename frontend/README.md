@@ -2,9 +2,18 @@
 
 This module serves static assets. The static assets are built using Typescript and SASS into the `./build` folder, and then `go-bindata` is used to generate a Go file with all assets embedded into it. The Naga module in this folder is responsible for mapping HTTP requests to the embedded files.
 
-The Makefile contains rules for building the `bindata.go` file, and the sub-commands for compiling the Typescript and SASS code are in `package.json`.
+The Makefile contains rules for building the `bindata.go` file. It combines
+sub-makefiles from the scripts folder.
 
-`package.json`, `bower.json`, `tsconfig.json`, and `tslint.json` contain various settings for asset compilation, mostly pertaining to Typescript.
+The following are various configs files:
+
+|file|description|
+|----|-----------|
+|`bower.json`|bower dependencies
+|`package.json`|npm dependencies
+|`tsconfig.json`|Typescript
+|`tslint.json`|linter configs
+|`typings.json`|Typescript external types
 
 ## Usage
 
