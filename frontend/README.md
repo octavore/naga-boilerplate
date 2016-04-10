@@ -10,5 +10,6 @@ The Makefile contains rules for building the `bindata.go` file, and the sub-comm
 
 ```
 make prepare # installs go-bindata, and node and bower deps.
-make all     # runs the npm
+make sources # builds all sources into ./build
+make test    # builds tests into ./test and runs them
 ```
