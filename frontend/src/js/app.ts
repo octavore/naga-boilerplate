@@ -1,9 +1,9 @@
-/// <reference path="../bower_components/mithril/mithril.d.ts" />
+/// <reference path="../../typings/browser.d.ts" />
 
 let Component = {
   controller: class ComponentController { },
   view: () => m('div', 'hello world!')
-}
+};
 
 export let routes: _mithril.MithrilRoutes = {
   '/': Component

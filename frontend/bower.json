@@ -1,9 +1,8 @@
 {
   "private": true,
   "name": "frontend",
-  "dependencies": {
+  "devDependencies": {
     "bourbon": "^4.2.6",
-    "normalize-css": "normalize.css#^3.0.3",
-    "mithril": "^0.2.3"
+    "normalize-css": "normalize.css#^3.0.3"
   }
 }

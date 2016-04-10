@@ -1,25 +1,15 @@
-bindata.go: clean build app.js app.css
-	cp html/* build/
-	$$GOPATH/bin/go-bindata -pkg static -prefix build/ build/
+# shell is set so new path is picked up
+SHELL := /bin/bash
+export PATH := ./node_modules/.bin:$(GOPATH)/bin:$(PATH)
 
-clean:
-	rm -f bindata.go
-	rm -rf build
+# directories
+SRC_DIR=./src
+TEST_DIR=./test
+BUILD_DIR=./build
 
-build:
-	mkdir build
+include scripts/prepare
+include scripts/build
+include scripts/test
 
-app.js:
-	npm run build
-
-app.css:
-	npm run build-sass
-
-prepare:
-	go get -u github.com/jteeuwen/go-bindata/...
-	npm install
-	./node_modules/.bin/bower install
-
-prepare-clean: clean
-	rm -rf node_modules
-	rm -rf bower_components
+# clean ALL the things
+clean: build-clean prepare-clean test-clean
