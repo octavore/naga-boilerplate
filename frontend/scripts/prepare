@@ -7,3 +7,4 @@ prepare:
 prepare-clean:
 	rm -rf node_modules
 	rm -rf bower_components
+	rm -rf typings

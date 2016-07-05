@@ -1,11 +1,9 @@
-/// <reference path="../../typings/browser.d.ts" />
-
 let Component = {
   controller: class ComponentController { },
   view: () => m('div', 'hello world!')
 };
 
-export let routes: _mithril.MithrilRoutes = {
+export let routes: Mithril.Routes = {
   '/': Component
 };
 

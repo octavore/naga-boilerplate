@@ -6,8 +6,6 @@
   },
   "compileOnSave": true,
   "exclude": [
-    "typings/main",
-    "typings/main.d.ts",
     "node_modules"
   ]
 }
