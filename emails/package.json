@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "mjml": "^3.3.5"
+  }
+}
